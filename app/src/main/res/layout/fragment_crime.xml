@@ -1,0 +1,107 @@
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/crime_photo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerInside"
+                    android:cropToPadding="true"
+                    android:contentDescription="@string/crime_photo_no_image_description"
+                    android:background="@android:color/darker_gray"/>
+
+                <ImageButton
+                    android:id="@+id/crime_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/crime_photo_button_description"
+                    android:src="@android:drawable/ic_menu_camera"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    style="?android:listSeparatorTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crime_title_label" />
+
+                <EditText
+                    android:id="@+id/crime_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/crime_title_hint"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crime_details_label"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crime_details"/>
+
+        <Button
+            android:id="@+id/crime_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Friday June 26 11:47 China 2020"/>
+
+        <CheckBox
+            android:id="@+id/crime_solved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crime_solved_label"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crime_suspect"
+            android:textAllCaps="false"
+            android:text="@string/crime_suspect_text"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dial_button"
+            android:textAllCaps="false"
+            android:text="@string/connect_suspect"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crime_report"
+            android:textAllCaps="false"
+            android:text="@string/crime_report_text"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
